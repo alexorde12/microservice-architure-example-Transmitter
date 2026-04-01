@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="TransmitterApi.Api/TransmitterApi.Api.csproj" />
+  <Project Path="TransmitterApi.Application/TransmitterApi.Application.csproj" />
+  <Project Path="TransmitterApi.Domain/TransmitterApi.Domain.csproj" />
+  <Project Path="TransmitterApi.Infrastructure/TransmitterApi.Infrastructure.csproj" />
+</Solution>
