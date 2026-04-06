@@ -11,7 +11,7 @@ using TransmitterApi.Infrastructure.Data;
 namespace TransmitterApi.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260406091430_InitialMigration")]
+    [Migration("20260406100144_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -34,7 +34,8 @@ namespace TransmitterApi.Infrastructure.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");

@@ -21,7 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new() { Title = "CleanApiDemo", Version = "v1" });
+    c.SwaggerDoc("v1", new() { Title = "TransmitterAPI", Version = "v1" });
 });
 
 builder.Services.AddCors(options =>
@@ -45,17 +45,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanApiDemo API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Transmitter API v1");
         c.RoutePrefix = "swagger";
     });
 }
 
 app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
 
 app.MapGet("/products", async (IProductService productService) =>
 {
