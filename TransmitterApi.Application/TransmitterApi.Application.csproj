@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TransmitterApi.Domain\TransmitterApi.Domain.csproj" />
+    <ProjectReference Include="..\TransmitterApi.Infrastructure\TransmitterApi.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
